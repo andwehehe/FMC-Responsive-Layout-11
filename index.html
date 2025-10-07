@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+</head>
+<body>
+  <main>
+    <section class="input__section">
+      <article class="heading">
+        <h1 class="app__name">Mortgage Calculator</h1>
+        <p class="clear">Clear All</p>
+      </article>
+
+      <section class="inputs">
+        <section class="container__input input-1">
+          <label for="amount">Mortgage Amount</label>
+          <article class="sub-container__input sub-container__input-1">
+            <input type="number" name="amount" id="mortgageAmount" value="amount">
+            <p class="icon">&pound;</p>
+          </article>
+          <p class="warning warning-1">This field is required</p>
+        </section>
+
+        <section class="container__input input-2">
+          <label for="term">Mortgage Term</label>
+          <article class="sub-container__input sub-container__input-2">
+            <input type="number" name="term" id="mortgageTerm" value="term">
+            <p class="icon">years</p>
+          </article>
+          <p class="warning warning-2">This field is required</p>
+        </section>
+
+        <section class="container__input input-3">
+          <label for="rate">Interest Rate</label>
+          <article class="sub-container__input sub-container__input-3">
+            <input type="number" name="rate" id="interestRate" value="rate">
+            <p class="icon">%</p>
+          </article>
+          <p class="warning warning-3">This field is required</p>
+        </section>
+
+        <section class="container__input">
+          <p class="mortgage__type">Mortgage Type</p>
+          <article class="sub-container__input radio__input">
+            <label class="custom__radio" id="radio__button">
+              <input type="radio" name="type" id="repaymentRadio">
+              <span class="checkmark"></span>
+            </label>
+            <label for="repayment">Repayment</label>
+          </article>
+
+          <article class="sub-container__input radio__input">
+            <label class="custom__radio" id="radio__button">
+              <input id="interestRadio" type="radio" name="type">
+              <span class="checkmark"></span>
+            </label>
+            <label for="interest">Interest Only</label>
+          </article>
+          <p class="warning warning-4">This field is required</p>
+        </section>
+      </section>
+
+      <button class="submit" id="submit">
+        <img src="assets/icon-calculator.svg" class="calculator__icon">
+        Calculate Repayments
+      </button>
+    </section>
+
+    <section class="output__section">
+      <!-- With output -->
+      <section class="with__output">
+        <h1 class="calc__output">Your Results</h1>
+        <p class="description__output">
+          Your results are shown below based on the information you provided.
+          To adjust the resultsm edit the form and click "calculate repayments" again.
+        </p>
+
+        <section class="container__output">
+          <p class="output__remarks">Your monthly repayments</p>
+          <p class="monthly__repayments">&pound;0.00</p>
+          <hr>
+          <p class="output__remarks">Total you'll repay over the term</p>
+          <p class="total__repayments">&pound;0.00</p>
+        </section>
+      </section>
+
+      <!-- without output -->
+      <section class="without__output">
+        <img src="assets/illustration-empty.svg" alt="" class="empty__result">
+        <h1 class="empty-result__remark">Results shown here</h1>
+        <p class="empty-result__description">
+          Complete the form and click "calculate repayments" to see what your
+          monthly repayments would be.
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
